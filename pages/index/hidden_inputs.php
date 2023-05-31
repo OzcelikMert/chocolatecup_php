@@ -1,0 +1,1 @@
+<input type="hidden" id="nav_page" value="<?php echo $_GET['nav_page']; ?>" />
