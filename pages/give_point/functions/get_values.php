@@ -13,7 +13,7 @@ if(file_exists($include_url_1) && file_exists($include_url_2) && file_exists($in
 }
 /* end Includes */
 
-if($_GET){
+if($_GET && $_GET["id"]){
     $contestant_id = ClearVariable($_GET["id"], "normal");
     // Admin Info
     $user_name = ClearVariable($_COOKIE["user_name"], "normal");
@@ -109,7 +109,7 @@ function CheckAccount($connect, $contestant_id){
 }
 // Check Defined Point
 function CheckDefinedPoint($connect, $id, $contestant_id){
-    $values = array();
+    $values = array("id" => [], "point" => []);
     $index = 0;
     $sql = "select * from points where point_giver = '$id' and point_receiver = '$contestant_id' and date ='".date("Y-m")."'";
     $query = mysqli_query($connect, $sql);

@@ -1,1 +1,1 @@
-<input type="hidden" id="nav_page" value="<?php echo $_GET['nav_page']; ?>" />
+<input type="hidden" id="nav_page" value="<?= $_GET['nav_page'] ?? ""; ?>" />

@@ -1,3 +1,7 @@
+<?php
+//ini_set('display_errors', 0);
+//ini_set('display_startup_errors', 0);
+?>
 <!-- Link -->
 <link rel="icon" type="image/png" sizes="96x96" href="./assets/images/icons/favicons/favicon-96x96.png">
 <link rel="stylesheet" href="./assets/fonts/mdi/css/materialdesignicons.css">

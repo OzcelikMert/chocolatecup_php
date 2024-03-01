@@ -2,8 +2,8 @@
 // Connect DB
 $db_host="localhost";
 $db_name="matrixte_chocolatecup";
-$db_user="matrixte_chocolatecup";
-$db_password="26108920Qwe*#";
+$db_user="root";
+$db_password="";
 
 /*---------------------------------------*/
 

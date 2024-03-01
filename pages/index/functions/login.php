@@ -11,14 +11,13 @@ if(file_exists($include_url_1) && file_exists($include_url_2)){
     include_once($include_url_2);
 }
 /* end Includes */
+$result = array();
 
 if($_POST){
-
     $user_name = ClearVariable($_POST["user_name"], "normal");
     $password = ClearVariable($_POST["password"], "normal");
     $password = VariableEncrypt($password, "md5");
-
-    $result = array();
+    
     $result = CheckVariables($conn, $user_name, $password);
 
     if(empty($result["comment"])){
@@ -29,9 +28,9 @@ if($_POST){
     }else{
         $result["type"] = "error";
     }
-
-    echo json_encode($result);
 }
+
+echo json_encode($result);
 
 /* Functions */
 // Check Variables

@@ -11,9 +11,7 @@ if(file_exists($include_url_1) && file_exists($include_url_2)){
     include_once($include_url_2);
 }
 /* end Includes */
-
-if($_COOKIE){
-    
+if($_COOKIE && isset($_COOKIE["user_name"]) && isset($_COOKIE["password"])){
     $user_name = ClearVariable($_COOKIE["user_name"], "normal");
     $password = ClearVariable($_COOKIE["password"], "normal");
 
